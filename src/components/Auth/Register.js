@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { register } from '../../actions/authActions';
 
-const Register = ({ history }) => {
+const Register = () => {
   const [formData, setFormData] = useState({
     companyName: '',
     email: '',
@@ -10,18 +11,19 @@ const Register = ({ history }) => {
     password2: '',
   });
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const { companyName, email, password, password2 } = formData;
 
   const onChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
       console.error('Passwords do not match');
     } else {
-      dispatch(register({ companyName, email, password }));
-      history.push('/candidates');
+      await dispatch(register({ companyName, email, password }));
+      navigate('/candidates');
     }
   };
 
