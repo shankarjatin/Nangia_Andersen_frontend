@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchCandidates } from '../../actions/candidateActions';
 import CandidateCard from './CandidateCard';
+import { Link } from 'react-router-dom';
 
 const CandidateSearch = () => {
   const [formData, setFormData] = useState({ location: '', jobRole: '' });
@@ -43,6 +44,7 @@ const CandidateSearch = () => {
           <CandidateCard key={candidate._id} candidate={candidate} />
         ))}
       </div>
+      <Link to="/">Home</Link>
     </div>
   );
 };

@@ -7,6 +7,7 @@ const Home = () => {
       <h1>Transform Your Hiring Process</h1>
       <p>Streamline your recruitment with our cutting-edge solution.</p>
       <Link to="/register">Get Started</Link>
+      <Link to="/login">Get Started</Link>
     </div>
   );
 };
