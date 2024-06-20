@@ -18,20 +18,19 @@ const Login = () => {
   };
 
   return (
-    <section className="h-screen items-center justify-center bg-gray-100">
-        <div className='grid grid-cols-2 mt-40 gap-10'>
-  
-      <div className='col-span-1'>
+    <section className="min-h-screen flex items-center justify-center custom-background sm:pt-2 sm:py-5 lg:py-20 px-4 ">
+    <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-6xl'>
+      <div className='sm:col-span-1'>
         <div className="mb-6">
           <img
             src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-            className="w-full"
+            className="w-full h-auto"
             alt="Sample image"
           />
         </div>
-        </div>
-        <div className='col-span-1'>
-        <form onSubmit={onSubmit}>
+      </div>
+      <div className='sm:col-span-1'>
+        <form onSubmit={onSubmit} className="space-y-6">
           <div className="mb-4">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email address
@@ -64,21 +63,19 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="w-fit bg-gray-700 text-white py-2 px-4 rounded-md hover:bg-gray-800 "
+            className="sm:w-full lg:w-fit bg-gray-700 text-white py-2 px-4 rounded-md hover:bg-gray-800"
           >
             Login
           </button>
         </form>
         <p className="mt-4 text-sm text-gray-600">
           Don't have an account?{' '}
-        
-          <Link to="/register"  className="font-medium text-primary hover:text-primary-hover">Get Started</Link>
-          
+          <Link to="/register" className="font-medium text-primary hover:text-primary-hover">Get Started</Link>
         </p>
-        </div>
       </div>
-      
-    </section>
+    </div>
+  </section>
+  
   );
 };
 
