@@ -1,13 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Register from '../Auth/Register.js';
 const Home = () => {
   return (
     <div>
-      <h1>Transform Your Hiring Process</h1>
-      <p>Streamline your recruitment with our cutting-edge solution.</p>
-      <Link to="/register">Get Started</Link>
-      <Link to="/login">Get Started</Link>
+    <Register/>
     </div>
   );
 };

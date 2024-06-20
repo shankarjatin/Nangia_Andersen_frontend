@@ -9,9 +9,9 @@ import PrivateRoute from './components/Layout/PrivateRoute';
 const App = () => {
   return (
     <Router>
-      <div className="App">
+      <div className="App mt-0">
         <Routes>
-          <Route path="/" element={<Register />} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route element={<PrivateRoute />}>
