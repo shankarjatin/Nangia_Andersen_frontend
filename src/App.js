@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { composeWithDevTools } from "@redux-devtools/extension";
 import Home from './components/Layout/Home';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
